@@ -4,7 +4,7 @@
 
 <p align="center"><img src="docs/demo3d.gif" width="860" alt="A 3D fruit fly carries a chess piece across the board while the Kenyon cells of its real FlyWire mushroom body light up"></p>
 
-**[▶ Play it in the browser](https://gexhaw.github.io/chessfly/)** · no install, no server, no GPU
+**[▶ Play it in the browser](https://gexclash.github.io/chessfly/)** · no install, no server, no GPU
 
 The mushroom body is the part of an insect brain that learns which smells mean sugar and which mean danger. ChessFly takes the input wiring of a real one: all **285 olfactory projection neurons, 5,177 Kenyon cells and the 21,509 connections between them** in the FlyWire whole-brain connectome of an adult female *Drosophila* (release v783, reconstructed from electron microscopy by machine learning and proofread by the FlyWire consortium). Here the "smells" are chess pieces. The model gets no chess knowledge at all: nobody tells it that a queen is worth more than a pawn, that the centre matters, or which openings are good. It knows the rules and gets a dopamine signal after every game saying how things turned out.
 
@@ -170,14 +170,14 @@ Treat these as rough: 20 games give about ±120 Elo of luck either way (the 3 s 
 - **The search is not a fly.** No insect looks eight moves ahead. The look-ahead is standard engine code; everything it knows about chess positions, it gets from the output neuron. That is also why it plays best with a clock: the search makes up for what its single output neuron cannot see.
 - **The sandbox fly is part puppet.** Its words, its anger meter and its tantrums are scripted reactions to what you do. The gut feeling it shows is not: that is the real output neuron re-reading the board after every change, which is why stealing its queen makes it miserable and a gift of three queens does not. Its replies are its normal thinking (0.3 s), from whatever position you leave it in.
 - **Scores are noisy.** Each regular exam is 160 games, so single points on the charts move by ±60 rating points from luck alone.
-- **Sibling project.** [FLY67](https://github.com/gexhaw/fly67) runs the *whole* FlyWire brain (138,639 neurons) as a spiking model driving a virtual fly.
+- **Sibling project.** [FLY67](https://github.com/gexclash/fly67) runs the *whole* FlyWire brain (138,639 neurons) as a spiking model driving a virtual fly.
 
 ## Run it yourself
 
 It is plain HTML and JavaScript modules with no build step.
 
 ```sh
-git clone https://github.com/gexhaw/chessfly && cd chessfly
+git clone https://github.com/gexclash/chessfly && cd chessfly
 python3 -m http.server 8000        # then open http://localhost:8000
 ```
 
